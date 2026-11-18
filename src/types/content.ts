@@ -1,13 +1,13 @@
 // Content type definitions for AI Content Studio
 
 export type ContentType = 
-  | 'instagram-caption'
-  | 'facebook-post'
-  | 'linkedin-post'
-  | 'blog-article'
+  | 'instagram-captions'
+  | 'facebook-posts'
+  | 'linkedin-posts'
+  | 'blog-articles'
   | 'google-ads'
-  | 'marketing-email'
-  | 'product-description'
+  | 'email-marketing'
+  | 'product-descriptions'
   | 'website-content';
 
 export type ToneOfVoice = 'professional' | 'friendly' | 'persuasive' | 'luxury' | 'informative';
@@ -38,10 +38,29 @@ export interface ContentSettings {
   callToAction: string;
 }
 
+// Backend API Request type (matches server/src/types.ts)
 export interface ContentGenerationRequest {
-  contentType: ContentType;
-  businessInfo: BusinessInfo;
-  contentSettings: ContentSettings;
+  contentType: string;
+  businessName: string;
+  industry: string;
+  productOrService: string;
+  targetAudience: string;
+  location: string;
+  toneOfVoice: string;
+  language: string;
+  contentLength: string;
+  callToAction: string;
+}
+
+// Backend API Response type
+export interface ContentGenerationResponse {
+  success: boolean;
+  content: string;
+  isDemoData: boolean;
+  contentType: string;
+  timestamp: string;
+  error?: string;
+  errors?: Array<{ field: string; message: string }>;
 }
 
 export interface GeneratedContent {

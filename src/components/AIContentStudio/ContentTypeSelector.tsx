@@ -9,7 +9,7 @@ interface ContentTypeSelectorProps {
 
 const contentTypeOptions: ContentTypeOption[] = [
   {
-    id: 'instagram-caption',
+    id: 'instagram-captions',
     label: 'Instagram Caption',
     description: 'Engaging social media captions',
     icon: '📸',
@@ -17,7 +17,7 @@ const contentTypeOptions: ContentTypeOption[] = [
     exampleLength: '100-150 characters',
   },
   {
-    id: 'facebook-post',
+    id: 'facebook-posts',
     label: 'Facebook Post',
     description: 'Engaging Facebook content',
     icon: '👥',
@@ -25,7 +25,7 @@ const contentTypeOptions: ContentTypeOption[] = [
     exampleLength: '200-300 characters',
   },
   {
-    id: 'linkedin-post',
+    id: 'linkedin-posts',
     label: 'LinkedIn Post',
     description: 'Professional LinkedIn content',
     icon: '💼',
@@ -33,7 +33,7 @@ const contentTypeOptions: ContentTypeOption[] = [
     exampleLength: '250-400 characters',
   },
   {
-    id: 'blog-article',
+    id: 'blog-articles',
     label: 'Blog Article',
     description: 'Full-length blog posts',
     icon: '📝',
@@ -47,14 +47,14 @@ const contentTypeOptions: ContentTypeOption[] = [
     exampleLength: '30-90 characters',
   },
   {
-    id: 'marketing-email',
-    label: 'Marketing Email',
+    id: 'email-marketing',
+    label: 'Email Marketing',
     description: 'Professional email campaigns',
     icon: '✉️',
     exampleLength: '200-500 words',
   },
   {
-    id: 'product-description',
+    id: 'product-descriptions',
     label: 'Product Description',
     description: 'E-commerce product content',
     icon: '📦',

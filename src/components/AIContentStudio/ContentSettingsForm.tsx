@@ -22,20 +22,14 @@ const contentLengths: { value: ContentLength; label: string; description: string
 ];
 
 const languages = [
-  'English',
-  'Spanish',
-  'French',
-  'German',
-  'Italian',
-  'Portuguese',
-  'Dutch',
-  'Russian',
-  'Chinese (Simplified)',
-  'Chinese (Traditional)',
-  'Japanese',
-  'Korean',
-  'Arabic',
-  'Hindi',
+  { label: 'English', value: 'english' },
+  { label: 'Spanish', value: 'spanish' },
+  { label: 'French', value: 'french' },
+  { label: 'German', value: 'german' },
+  { label: 'Portuguese', value: 'portuguese' },
+  { label: 'Italian', value: 'italian' },
+  { label: 'Chinese', value: 'chinese' },
+  { label: 'Japanese', value: 'japanese' },
 ];
 
 const ContentSettingsForm: React.FC<ContentSettingsFormProps> = ({
@@ -78,8 +72,8 @@ const ContentSettingsForm: React.FC<ContentSettingsFormProps> = ({
         >
           <option value="">Select a language</option>
           {languages.map((lang) => (
-            <option key={lang} value={lang}>
-              {lang}
+            <option key={lang.value} value={lang.value}>
+              {lang.label}
             </option>
           ))}
         </select>

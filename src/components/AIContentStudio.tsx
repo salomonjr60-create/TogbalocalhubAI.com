@@ -21,7 +21,7 @@ const AIContentStudio: React.FC<AIContentStudioProps> = ({ onNavigateToDashboard
   const [businessInfo, setBusinessInfo] = useState<Partial<BusinessInfo>>({});
   const [contentSettings, setContentSettings] = useState<Partial<ContentSettings>>({
     toneOfVoice: 'professional',
-    language: 'English',
+    language: 'english',
     contentLength: 'medium',
   });
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
