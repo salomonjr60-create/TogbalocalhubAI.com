@@ -1,0 +1,56 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 280px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.app-container.sidebar-collapsed {
+  margin-left: 80px;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling for main content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .app-container {
+    margin-left: 0;
+  }
+
+  .app-container.sidebar-collapsed {
+    margin-left: 0;
+  }
+}

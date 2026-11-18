@@ -1,0 +1,132 @@
+.recent-activity {
+  padding: 32px 32px;
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  border-color: var(--secondary-gold);
+  transform: translateX(4px);
+  box-shadow: 0 8px 16px rgba(212, 165, 116, 0.08);
+}
+
+.activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--secondary-gold)20 0%, var(--border-light)20 100%);
+  border-radius: 10px;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-action {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin: 0 0 4px 0;
+}
+
+.activity-description {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .recent-activity {
+    padding: 24px 24px;
+    margin-left: 80px;
+  }
+
+  .activity-item {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-activity {
+    padding: 16px 16px;
+    margin-left: 0;
+  }
+
+  .section-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .activity-list {
+    gap: 12px;
+  }
+
+  .activity-item {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .activity-action {
+    font-size: 14px;
+  }
+
+  .activity-description {
+    font-size: 12px;
+  }
+
+  .activity-time {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-activity {
+    padding: 12px 12px;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .activity-time {
+    white-space: normal;
+  }
+}

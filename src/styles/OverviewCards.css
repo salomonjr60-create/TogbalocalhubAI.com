@@ -1,0 +1,242 @@
+.overview-section {
+  padding: 32px 32px;
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary-gold) 0%, transparent 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  border-color: var(--secondary-gold);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(212, 165, 116, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--secondary-gold)20 0%, var(--border-light)20 100%);
+  border-radius: 12px;
+}
+
+.trend-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.trend-badge.trend-up {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+
+.trend-badge.trend-down {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.trend-badge.trend-neutral {
+  background-color: rgba(148, 163, 184, 0.15);
+  color: var(--text-muted);
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.card-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Demo Badge */
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: rgba(212, 165, 116, 0.1);
+  color: var(--secondary-gold);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--secondary-gold);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .overview-section {
+    padding: 24px 24px;
+    margin-left: 80px;
+  }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-value {
+    font-size: 28px;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-section {
+    padding: 16px 16px;
+    margin-left: 0;
+  }
+
+  .section-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card-value {
+    font-size: 24px;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .card-header {
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .card-subtitle {
+    font-size: 11px;
+  }
+
+  .demo-badge {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-section {
+    padding: 12px 12px;
+  }
+
+  .overview-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card-value {
+    font-size: 20px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+

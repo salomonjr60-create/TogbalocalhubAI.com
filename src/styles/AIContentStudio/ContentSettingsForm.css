@@ -1,0 +1,222 @@
+/* Content Settings Form */
+
+.content-settings-form {
+  width: 100%;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+
+.form-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* Settings Groups */
+.settings-group {
+  margin-bottom: 20px;
+}
+
+.settings-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Tone Buttons */
+.tone-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.tone-button {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tone-button:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.tone-button.active {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.tone-icon {
+  font-size: 20px;
+}
+
+.tone-label {
+  font-weight: 600;
+}
+
+/* Select Input */
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-select:hover,
+.form-select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.form-select option {
+  background: #0a1428;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+/* Length Buttons */
+.length-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.length-button {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.length-button:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.length-button.active {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.length-label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.length-description {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Text Input */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.input-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 6px 0 0 0;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tone-buttons,
+  .length-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .length-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tone-buttons,
+  .length-buttons {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tone-button,
+  .length-button {
+    padding: 10px;
+  }
+
+  .form-select,
+  .form-input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .settings-group label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
